@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Import handlebars.js-->
+    <link rel="code" href="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#7b1fa2">
+  </head>
+
+  <body style="background-color:#37474f;" onload = changeText();>
+  <!--<body style="background-color:#E1BEE7;">-->
+    <nav class="nav-extended purple">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Little Kisses</a>
+      </div>
+      <div class="nav-content">
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light cyan pulse">
+          <!--maybe add a tooltip to this button-->
+          <i class="material-icons">home</i>
+        </a>
+      </div>
+    </nav>
+    
+    <script type="text/javascript">
+    var chooseLove = 1;
+    var love2 = "I love you because you are cute";
+    var love3 = "I love you because you're hot";
+    var whichLove;
+    var text;
+    function changeText() {
+      chooseLove = chooseLove + 1;
+      whichLove = "love" + chooseLove;
+      document.getElementById('reason').innerHTML = eval(whichLove);
+      // if(value == "Button 3")
+      // {
+      //   document.getElementById('pText').setAttribute('style', 'color: green');
+        
+      // }
+      
+    }
+    
+    </script>
+    
+    <div class="container center">
+      <br><br>
+      <p id="reason">Something's wrong if you can see me - try turning on javascript</p>
+      
+      <a class="btn" onclick="changeText();">next</a>
+    </div>
+
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+
+  </body>
+</html>
